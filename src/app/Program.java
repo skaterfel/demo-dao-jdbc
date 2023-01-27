@@ -16,13 +16,17 @@ public class Program {
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 
-		
 		System.out.println();
-		System.out.println("=== Test 1: Seller findByDepartment ===");
-		
+		System.out.println("=== Test 2: Seller findByDepartment ===");
 		Department department = new Department(2, null);
-		
 		List<Seller> list = sellerDao.findByDepartment(department);
+		list.forEach(System.out::println);
+
+		System.out.println();
+		System.out.println("=== Test 3: Seller findAll ===");
+
+
+		list = sellerDao.findAll();
 		list.forEach(System.out::println);
 	}
 }
